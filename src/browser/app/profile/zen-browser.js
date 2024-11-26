@@ -283,3 +283,12 @@ pref('browser.download.autohideButton', false);
 #ifdef XP_MACOSX
 pref('widget.macos.titlebar-blend-mode.behind-window', true);
 #endif
+
+
+// Font fixes to allow Cleartype to render text smoother
+#ifdef XP_MACOSX
+pref("gfx.font_rendering.cleartype_params.force_gdi_classic_for_families", "");
+pref("gfx.font_rendering.cleartype_params.gamma", 1750);
+pref("gfx.font_rendering.cleartype_params.pixel_structure", 1);
+pref("gfx.font_rendering.cleartype_params.rendering_mode", 5);
+#endif
